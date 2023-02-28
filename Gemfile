@@ -50,6 +50,8 @@ group :development, :test do
   gem "shoulda-matchers", "~> 5.3", require: false
   gem "shoulda-context", "~> 2.0", require: false
   gem "rubocop", require: false
+  gem "rubocop-graphql", require: false
+  gem "rubocop-rails", require: false
   gem "rubocop-rspec", require: false
   gem "simplecov", "~> 0.21.0", require: false
 end
