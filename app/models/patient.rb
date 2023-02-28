@@ -5,5 +5,6 @@ class Patient < ApplicationRecord
   validates :full_name, presence: true
 
   # == Relationships ========================================================
+  has_many  :injections
 end
 
