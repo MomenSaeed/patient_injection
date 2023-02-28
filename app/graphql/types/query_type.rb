@@ -6,5 +6,8 @@ class Types::QueryType < Types::BaseObject
 
   field :patient, resolver: Resolvers::Patients::Details
   field :patients_connection, resolver: Resolvers::Patients::Index
+
+  field :injection, resolver: Resolvers::Injections::Details
+  field :injections_connection, resolver: Resolvers::Injections::Index
 end
 
