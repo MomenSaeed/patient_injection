@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+  "thunder-client.saveToWorkspace": true
+}
