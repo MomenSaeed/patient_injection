@@ -1,7 +1,6 @@
 require: 
   - rubocop-rspec
   - rubocop-graphql
-  - rubocop-rails
 
 AllCops:
   Exclude:
@@ -10,6 +9,7 @@ AllCops:
     - 'bin/**'
     - 'config/application.rb'
   NewCops: enable
+  SuggestExtensions: false
 
 Bundler/OrderedGems:
   Enabled: false
@@ -160,4 +160,16 @@ Style/ExponentialNotation:
   Enabled: true
 
 Style/RedundantBegin:
+  Enabled: false
+
+GraphQL/FieldDescription:
+  Enabled: false
+
+GraphQL/ObjectDescription:
+  Enabled: false
+
+GraphQL/ArgumentDescription:
+  Enabled: false
+
+GraphQL/FieldName:
   Enabled: false
