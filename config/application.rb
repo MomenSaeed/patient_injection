@@ -38,6 +38,10 @@ module PatientInjection
 
     config.generators do |g|
       g.orm :active_record, primary_key_type: :uuid
+
+      # to generate rspec files when using rails generators
+      g.test_framework  :rspec, fixture: false,
+      g.fixture_replacement :factory_bot, dir: "spec/factories"
     end
   end
 end
