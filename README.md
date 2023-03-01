@@ -23,7 +23,7 @@ you need only to run:
 $ docker-compose up
 ```
 
-After containers are up and running you can access the backend through [localhost:3000](localhost:3000).
+After containers are up and running you can access the backend through (localhost:3000).
 
 To access rails container you can run:
 
@@ -34,7 +34,7 @@ $ docker exec -it patient-injection-api bash
 to generate data seed run:
 
 ```bash
-$ docker exec -it patient-injection-api bin/rails  db:seed
+$ docker exec -it patient-injection-api bin/rails db:seed
 ```
 
 ## Api Documentation
@@ -105,7 +105,7 @@ Main Factors for grapqhl:
 
 - [CreatePatient](https://github.com/MomenSaeed/patient_injection/blob/main/app/graphql/mutations/create_patient.rb) in begining have to create new patient account to get `api_key` which will be used to authintecate all requests and also to be associated with injections.
 
-- For authentication for needed needed requests we are passing header named `Patient-Api-Key` with the patient `api_key` value, to authenticate the request current patient [check](https://github.com/MomenSaeed/patient_injection/blob/main/app/controllers/concerns/authenticable_patient.rb) for more details.
+- To authenticate requests we are passing header named `Patient-Api-Key` with the patient `api_key` value, to authenticate the request current patient [check](https://github.com/MomenSaeed/patient_injection/blob/main/app/controllers/concerns/authenticable_patient.rb) for more details.
 
 - And we are checking in graphql for [resolvers](https://github.com/MomenSaeed/patient_injection/blob/main/app/graphql/resolvers/base_resolver.rb#L6) and [mutations](https://github.com/MomenSaeed/patient_injection/blob/main/app/graphql/mutations/base_mutation.rb#L11) if the `current_patient` exists or not, also already added [PatientGrapqhlContext](https://github.com/MomenSaeed/patient_injection/blob/main/app/graphql/patient_context.rb) to manage patient sessions.
 
