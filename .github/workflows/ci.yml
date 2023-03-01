@@ -44,5 +44,5 @@ jobs:
         env:
           RAILS_ENV: test
         run: |
-          bundle exec rails db:prepare
+          bundle exec rails db:test:prepare
           bundle exec rspec
