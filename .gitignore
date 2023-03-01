@@ -30,3 +30,5 @@
 
 # Ignore Env Simple Coverage Files
 /coverage
+
+/.DS_Store
