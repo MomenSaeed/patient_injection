@@ -176,3 +176,6 @@ GraphQL/FieldName:
 
 GraphQL/ExtractType:
   Enabled: false
+
+RSpec/VerifiedDoubles:
+  Enabled: false
