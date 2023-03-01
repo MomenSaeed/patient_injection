@@ -4,15 +4,13 @@ class Mutations::BaseMutation < GraphQL::Schema::RelayClassicMutation
   input_object_class Types::BaseInputObject
   object_class Types::BaseObject
 
-  def execution_error(message: nil, errors: nil, status: :unprocessable_entity, code: 422)
-    GraphQL::ExecutionError.new(
-      message,
-      options: {
-        status:,
-        code:,
-        errors:,
-      }
-    )
+  UNAUTHORIZED_FIELDS = %w[createPatient].freeze
+
+  def authorized?(*_args)
+    super()
+    UNAUTHORIZED_FIELDS.include?(field.name) || logged_in?
   end
+
+  include PatientContext
 end
 

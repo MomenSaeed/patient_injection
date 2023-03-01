@@ -3,7 +3,7 @@ class Mutations::CreateInjection < Mutations::BaseMutation
   argument :injection, Types::Injection::Input, required: false
 
   def resolve(injection:)
-    create_injection = Injections::Create.call(injection_params: injection.to_h)
+    create_injection = Injections::Create.call(injection_params: injection.to_h, patient: current_patient)
     create_injection.success? ? { injection: create_injection.injection } : execution_error(errors: create_injection.errors)
   end
 end

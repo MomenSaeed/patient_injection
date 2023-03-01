@@ -6,9 +6,7 @@ class BaseInteractor
   private
 
     def group_errors(record)
-      record.errors.group_by_attribute.each_key do |attr|
-        context.errors.push("#{attr}.not_valid")
-      end
+      context.errors = record.errors
       raise_failure
     end
 

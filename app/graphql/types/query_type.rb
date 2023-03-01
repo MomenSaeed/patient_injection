@@ -4,7 +4,7 @@ class Types::QueryType < Types::BaseObject
   include GraphQL::Types::Relay::HasNodeField
   include GraphQL::Types::Relay::HasNodesField
 
-  field :patient, resolver: Resolvers::Patients::Details
+  field :currentPatient, resolver: Resolvers::Patients::Details
   field :patients_connection, resolver: Resolvers::Patients::Index
 
   field :injection, resolver: Resolvers::Injections::Details

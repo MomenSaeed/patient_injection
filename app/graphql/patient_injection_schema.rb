@@ -34,5 +34,16 @@ class PatientInjectionSchema < GraphQL::Schema
     # For example, use Rails' GlobalID library (https://github.com/rails/globalid):
     GlobalID.find(global_id)
   end
+
+  def self.unauthorized_field(error)
+    raise GraphQL::ExecutionError.new(
+      "An object of type #{error.field.name} was hidden due to permissions",
+      options: {
+        status: "Unauthorized",
+        code:   401,
+        errors: nil,
+      }
+    )
+  end
 end
 

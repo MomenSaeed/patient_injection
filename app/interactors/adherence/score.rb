@@ -2,8 +2,6 @@ class Adherence::Score < BaseInteractor
   ERROR_MESSAGE = "adherence.process_failed".freeze
 
   delegate :patient, to: :context
-  delegate :start_date, to: :context
-  delegate :end_date, to: :context
   delegate :treatment_schedule, to: :context
   delegate :injections_graph, to: :context
 
@@ -20,7 +18,7 @@ class Adherence::Score < BaseInteractor
   end
 
   def set_patient
-    context.patient = ::Patient.find(context.patient_id)
+    context.patient ||= ::Patient.find(context.patient_id)
   end
 
   def set_injections_graph
@@ -30,15 +28,15 @@ class Adherence::Score < BaseInteractor
   end
 
   def expected_injection
-    injections_graph.count { |injection| injection[:expected_injection] }
+    @_expected_injection = injections_graph.count { |injection| injection[:expected_injection] }
   end
 
   def actual_injection
-    injections_graph.count { |injection| injection[:has_injection] }
+    @_actual_injection = injections_graph.count { |injection| injection[:has_injection] }
   end
 
   def on_time_injection
-    injections_graph.count { |injection| injection[:expected_injection] && injection[:has_injection] }
+    @_on_time_injection = injections_graph.count { |injection| injection[:expected_injection] && injection[:has_injection] }
   end
 
   def adherence_score
@@ -46,5 +44,15 @@ class Adherence::Score < BaseInteractor
 
     ((on_time_injection * 100.00) / expected_injection).ceil
   end
+
+  private
+
+    def start_date
+      context.start_date || patient.created_at.to_date.to_s
+    end
+
+    def end_date
+      context.end_date || Date.today.to_s
+    end
 end
 

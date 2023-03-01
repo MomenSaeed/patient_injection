@@ -2,6 +2,7 @@ class Injections::Create < BaseInteractor
   ERROR_MESSAGE = "injection.create_failed".freeze
 
   delegate :injection, to: :context
+  delegate :patient, to: :context
 
   before :set_injection, :validate_injection
 
@@ -12,7 +13,9 @@ class Injections::Create < BaseInteractor
   private
 
     def set_injection
-      context.injection = Injection.new(context.injection_params)
+      context.injection = Injection.new(context.injection_params).tap do |i|
+        i.patient = patient
+      end
     end
 
     def validate_injection

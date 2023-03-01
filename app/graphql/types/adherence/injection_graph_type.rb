@@ -10,19 +10,19 @@ class Types::Adherence::InjectionGraphType < Types::BaseObject
   field :year, Int, null: false
 
   def day
-    context.date.day
+    object[:date].day
   end
 
   def year
-    context.date.year
+    object[:date].year
   end
 
   def week_day
-    context.date.strftime("%a")
+    object[:date].strftime("%a")
   end
 
   def month
-    context.date.strftime("%b")
+    object[:date].strftime("%b")
   end
 end
 
