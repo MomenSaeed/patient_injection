@@ -3,7 +3,7 @@ name: CI
 on:
   push:
 jobs:
-  test:
+  test-check:
     runs-on: ubuntu-latest
     services:
       db:
