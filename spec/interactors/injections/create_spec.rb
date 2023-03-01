@@ -13,7 +13,7 @@ RSpec.describe Injections::Create do
       expect(create_context).to be_a_success
     end
 
-    it "creats new Inection" do
+    it "creats new Injection" do
       result = create_context
       expect(result.injection).to eq(Injection.last)
     end

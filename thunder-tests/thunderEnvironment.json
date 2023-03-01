@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "882d7d1e-d441-4010-bcde-0b84c07f371d",
+    "name": "development",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-03-01T17:37:30.578Z",
+    "modified": "2023-03-01T17:37:30.578Z",
+    "data": [
+      {
+        "name": "apiUrl",
+        "value": "localhost:3000/graphql"
+      },
+      {
+        "name": "patientApiKey",
+        "value": "15436c2791108e5c16dcdfc1f99aa732"
+      }
+    ]
+  }
+]

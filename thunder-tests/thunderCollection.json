@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "1d49028f-7696-4466-8d1b-b583cefba14d",
+    "colName": "Patients",
+    "created": "2023-03-01T10:38:32.319Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "543903bd-068e-4caf-bd35-39d0723e1dbf",
+    "colName": "Adherence",
+    "created": "2023-03-01T10:38:46.275Z",
+    "sortNum": 30000,
+    "folders": []
+  },
+  {
+    "_id": "ca5916fe-e558-47f6-93c8-87c034fdffef",
+    "colName": "Injections",
+    "created": "2023-03-01T17:42:20.688Z",
+    "sortNum": 20000,
+    "folders": []
+  }
+]
