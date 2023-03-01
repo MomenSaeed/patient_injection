@@ -45,6 +45,9 @@ gem "ice_cube", "~> 0.14.0"
 gem "faker"
 gem "factory_bot_rails", "~> 6.2"
 
+# Prometheus metric collector and exporter for Ruby
+gem "prometheus_exporter", "~> 2.0", ">= 2.0.8"
+
 group :development, :test do
   gem "pry"
   gem "pry-rails"

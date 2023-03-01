@@ -1,9 +1,14 @@
+require "prometheus_exporter/client"
+
 class PatientInjectionSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
 
   # For batch-loading (see https://graphql-ruby.org/dataloader/overview.html)
   use GraphQL::Dataloader
+
+  # for  collecting and aggregating prometheus metrics https://github.com/rmosolgo/graphql-ruby/blob/master/guides/queries/tracing.md#prometheus
+  use(GraphQL::Tracing::PrometheusTracing)
 
   # apply some limits to incoming queries.
   max_depth 5
