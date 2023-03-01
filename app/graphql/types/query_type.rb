@@ -9,5 +9,7 @@ class Types::QueryType < Types::BaseObject
 
   field :injection, resolver: Resolvers::Injections::Details
   field :injections_connection, resolver: Resolvers::Injections::Index
+
+  field :adherence_score, resolver: Resolvers::AdherenceScore
 end
 

@@ -173,3 +173,6 @@ GraphQL/ArgumentDescription:
 
 GraphQL/FieldName:
   Enabled: false
+
+GraphQL/ExtractType:
+  Enabled: false

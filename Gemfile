@@ -39,6 +39,9 @@ gem "graphql", "~> 2.0", ">= 2.0.17"
 # Interactor provides a common interface for performing complex user interactions.
 gem "interactor", "~> 3.1", ">= 3.1.2"
 
+# a recurring date library for Ruby. It allows for quick, programatic expansion of recurring date rules.
+gem "ice_cube", "~> 0.14.0"
+
 gem "faker"
 gem "factory_bot_rails", "~> 6.2"
 
