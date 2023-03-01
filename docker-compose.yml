@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  backend-api:
+    depends_on:
+      - "postgres"
+      - "redis"
+    container_name: patient-injection-api
+    build:
+      context: .
+    command: sh ./config/docker/start.sh
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: patient-injection-postgres
+
+  postgres:
+    image: postgres
+    container_name: patient-injection-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - patient-injection-postgres:/var/lib/postgresql/data
+
+  redis:
+    image: redis
+    container_name: patient-injection-redis
+    volumes:
+      - patient-injection-redis:/data
+
+volumes:
+  patient-injection-postgres:
+  patient-injection-redis:
