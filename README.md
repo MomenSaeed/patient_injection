@@ -13,17 +13,17 @@ For Database we used [postgres](https://www.postgresql.org/).
 
 ### Prerequisites
 
-you only need setup [Docker](https://www.docker.com/).
+Setup [Docker](https://www.docker.com/).
 
 ### Installing
 
-you need only to run:
+runing docker-compose is enough:
 
 ```bash
 $ docker-compose up
 ```
 
-After containers are up and running you can access the backend through (localhost:3000).
+When containers are up and running you can access the backend through [localhost:3000](localhost:3000).
 
 To access rails container you can run:
 
