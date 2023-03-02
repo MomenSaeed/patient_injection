@@ -78,7 +78,7 @@ By using [prometheus exporter](https://github.com/discourse/prometheus_exporter)
 to run the matrics:
 
 ```bash
-$ docker exec -it patient-injection-api bundle exec prometheus_exporter -a lib/graphql_collector.rb
+$ bundle exec prometheus_exporter -a lib/graphql_collector.rb
 ```
 
 and to access the metrcis open (http://localhost:9394/metrics).
