@@ -117,7 +117,7 @@ Main Factors for grapqhl:
 
 Goal:
 
-- user will send `start_date`(default is Patient cratedAt day) and `end_date`(default is Date.today).
+- user will send `start_date`(default is Patient created_at day) and `end_date`(default is Date of today).
 - user is requeried to send `treatment_schedule` value in the request to calculate the adherence
 - Get Graph with days and for each day has the info if patient already `had_injection_record` or this day is an `expected_injection` and he have to take injection on this day.
 - After we got this info we can calculatethe Adherence stats and get the score.

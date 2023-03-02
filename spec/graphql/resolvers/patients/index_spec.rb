@@ -6,7 +6,7 @@ RSpec.describe Resolvers::Patients::Index, type: :request do
   describe "requesting query from interactor" do
     let(:patient_index) { instance_double(Patients::Index, patients:) }
 
-    it "uses Patients::Details interactor" do
+    it "uses Patients::Index interactor" do
       allow(Patients::Index).to receive(:call).and_return(patient_index)
       graphql_query(query:, api_key: patients[0].api_key)
       graphql_data("data", "patientsConnection")
