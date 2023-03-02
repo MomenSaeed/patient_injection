@@ -99,7 +99,7 @@ Main Factors for grapqhl:
 
 - [mutations](https://graphql-ruby.org/mutations/mutation_root.html) used to handle graphql mutations (create/update/destroy) actions, which listed in [mutationType](https://github.com/MomenSaeed/patient_injection/blob/main/app/graphql/types/mutation_type.rb), and you can check mutations list [here](https://github.com/MomenSaeed/patient_injection/tree/main/app/graphql/mutations).
 
-- [connectionType](https://graphql-ruby.org/pagination/using_connections.html) used to handle the lists requests, which could handle page pagination with cursor and list size limits, we used it to handle pagination in [Patients](https://github.com/MomenSaeed/patient_injection/blob/main/app/graphql/resolvers/patients/index.rb#L2) List query and [Injections](https://github.com/MomenSaeed/patient_injection/blob/main/app/graphql/resolvers/injections/index.rb#L2) List query
+- [connectionType](https://graphql-ruby.org/pagination/using_connections.html) used to handle array list requests, which could handle page pagination with cursor and request data limit, we used it to handle pagination in [Patients](https://github.com/MomenSaeed/patient_injection/blob/main/app/graphql/resolvers/patients/index.rb#L2) List query and [Injections](https://github.com/MomenSaeed/patient_injection/blob/main/app/graphql/resolvers/injections/index.rb#L2) List query
 
 ### Features Structure
 
@@ -225,3 +225,7 @@ example output
     }
 }
 ```
+
+### Todo List
+
+- Front-end...
