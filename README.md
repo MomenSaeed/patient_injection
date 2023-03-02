@@ -71,17 +71,17 @@ $ docker exec -it patient-injection-api rubocop
 
 building CI using [github Actions](https://github.com/MomenSaeed/patient_injection/blob/main/.github/workflows/ci.yml) to run rspec and rubocop checks.
 
-### Exposing metrics
+## Exposing metrics
 
 By using [prometheus exporter](https://github.com/discourse/prometheus_exporter) but with [graphql-ruby](https://github.com/rmosolgo/graphql-ruby/blob/master/guides/queries/tracing.md#prometheus) handlers.
 
-to run the matrics:
+Run the matrics (Note\* it's working only when run command global not inside docker containers):
 
 ```bash
 $ bundle exec prometheus_exporter -a lib/graphql_collector.rb
 ```
 
-and to access the metrcis open (http://localhost:9394/metrics).
+To access the metrcis open [http://localhost:9394/metrics](http://localhost:9394/metrics).
 
 ## Code Structure
 
