@@ -41,7 +41,7 @@ $ docker exec -it patient-injection-api bin/rails db:seed
 
 To clarify project endpoints requests details.
 
-- Published [Postmant](https://documenter.getpostman.com/view/15636958/2s93CSpr19).
+- Published [Postman](https://documenter.getpostman.com/view/15636958/2s93CSpr19).
 
 - also if you are using VSCode you can check [thunder-client](https://www.thunderclient.com/) which already added to the project and all APIs are documented.
 
