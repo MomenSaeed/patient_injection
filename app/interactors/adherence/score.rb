@@ -40,7 +40,7 @@ class Adherence::Score < BaseInteractor
   end
 
   def adherence_score
-    return 0 if on_time_injection.zero?
+    return 0 if on_time_injection.zero? || expected_injection.zero?
 
     ((on_time_injection * 100.00) / expected_injection).ceil
   end
