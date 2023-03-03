@@ -103,7 +103,7 @@ Main Factors for grapqhl:
 
 ### Features Structure
 
-- [CreatePatient](https://github.com/MomenSaeed/patient_injection/blob/main/app/graphql/mutations/create_patient.rb) in begining have to create new patient account to get `api_key` which will be used to authintecate all requests and also to be associated with injections.
+- [CreatePatient](https://github.com/MomenSaeed/patient_injection/blob/main/app/graphql/mutations/create_patient.rb) in begining have to create new patient account to get `api_key` which will be used to authenticate all requests and also to be associated with injections.
 
 - To authenticate requests we are passing header named `Patient-Api-Key` with the patient `api_key` value, to authenticate the request current patient [check](https://github.com/MomenSaeed/patient_injection/blob/main/app/controllers/concerns/authenticable_patient.rb) for more details.
 
@@ -127,10 +127,6 @@ adding resolver [request](https://github.com/MomenSaeed/patient_injection/blob/m
 #### GraphGeneration
 
 - by going through the days between the start and end dates and on each date we check patient injection stats, check [this](https://github.com/MomenSaeed/patient_injection/blob/main/app/interactors/adherence/injections_graph.rb#L18-L20) example.
-
-#### Score Generation
-
-- after getting the graph we could calculate the stats and score like [here](https://github.com/MomenSaeed/patient_injection/blob/main/app/interactors/adherence/score.rb#L13-L16).
 
 #### Score Generation
 
