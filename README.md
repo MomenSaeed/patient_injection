@@ -23,7 +23,7 @@ runing docker-compose is enough:
 $ docker-compose up
 ```
 
-When containers are up and running you can access the backend through [localhost:3000](localhost:3000).
+When containers are up and running you can access the backend through [localhost:3000](http://localhost:3000).
 
 To access rails container you can run:
 
@@ -81,7 +81,7 @@ Run the matrics (Note\* it's working only when run command global not inside doc
 $ bundle exec prometheus_exporter -a lib/graphql_collector.rb
 ```
 
-To access the metrcis open [http://localhost:9394/metrics](http://localhost:9394/metrics).
+To access the metrcis open [localhost:9394/metrics](http://localhost:9394/metrics).
 
 ## Code Structure
 
