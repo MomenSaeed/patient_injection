@@ -31,7 +31,7 @@ RSpec.describe Injections::Index do
 
     it "returns only selected patient injections" do
       result = index_context
-      expect(result.injections).to eq(p1_injections)
+      expect(result.injections).to eq(p1_injections.sort { |a, b| b.created_at <=> a.created_at })
     end
   end
 end
