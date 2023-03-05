@@ -27,6 +27,9 @@ gem "interactor", "~> 3.1", ">= 3.1.2"
 # a recurring date library for Ruby. It allows for quick, programatic expansion of recurring date rules.
 gem "ice_cube", "~> 0.14.0"
 
+# Middleware that will make Rack-based apps CORS compatible.
+gem "rack-cors", "~> 2.0"
+
 gem "faker"
 gem "factory_bot_rails", "~> 6.2"
 
