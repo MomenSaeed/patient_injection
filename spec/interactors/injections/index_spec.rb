@@ -16,7 +16,7 @@ RSpec.describe Injections::Index do
 
     it "returns all injections" do
       result = index_context
-      expect(result.injections).to eq(Injection.all)
+      expect(result.injections).to eq(Injection.all.order(created_at: :desc))
     end
   end
 

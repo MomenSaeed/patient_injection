@@ -4,7 +4,9 @@ class Injections::Index < BaseInteractor
 
   before :set_injections, :with_patient
 
-  def call; end
+  def call
+    context.injections = injections.order(created_at: :desc)
+  end
 
   def set_injections
     context.injections = Injection.all
